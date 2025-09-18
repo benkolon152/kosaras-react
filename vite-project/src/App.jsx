@@ -40,7 +40,8 @@ export default class App extends React.Component {
           <h3>A kosár tartalma</h3>
           
             {
-              this.state.cart.items.length >= 1 && 
+              this.state.cart.items.length >= 1 
+              ? 
               <ul>
                 {
                   this.state.cart.items.map( (item, index) => 
@@ -48,6 +49,8 @@ export default class App extends React.Component {
                   )
                 }
               </ul>
+              :
+               <p>A kosár üres</p>
             }
           
         </div>
